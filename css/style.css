@@ -389,6 +389,7 @@ footer .menu_item a:hover {
 }
 
 .values__item {
+    min-height: 390px;
     padding: 50px 25px;
     background: var(--lilac-dark);
     border-radius: 10px;
