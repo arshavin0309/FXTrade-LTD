@@ -15,6 +15,7 @@
 
 .btn {
     display: inline-block;
+    align-items: center;
     padding: 16px 24px;
     background: linear-gradient(92.06deg, #827DDD 1.08%, #AFAAFB 105.22%);
     color: var(--white);
@@ -45,10 +46,10 @@
 .web {
     color: var(--lilac);
     background: #CABCF84D;
-    outline: 1px solid var(--lilac);
+    border: 1px solid var(--lilac);
 }
 
-.web {
+.web:hover {
     color: var(--white);
     background: var(--lilac);
 }
@@ -249,6 +250,10 @@ footer .container {
     white-space: nowrap;
 }
 
+.footer__nav .menu .menu-item:first-child a {
+    color: var(--lilac);
+}
+
 .footer__nav a {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -403,6 +408,65 @@ footer .menu_item a:hover {
 .swiper-wrapper {
     align-items: stretch;
 }
+
+.platform__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.platform__top p {
+    max-width: 420px;
+}
+
+.platform__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.platform__box {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.platform__list {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+}
+
+.platform__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform__item::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    background: var(--lilac);
+}
+
+.platform__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.platform__buttons .btn {
+    padding: 15px 50px;
+}
+
+
+
 
 
 
