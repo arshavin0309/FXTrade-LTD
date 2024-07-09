@@ -14,10 +14,12 @@
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
-    padding: 16px 24px;
-    background: linear-gradient(92.06deg, #827DDD 1.08%, #AFAAFB 105.22%);
+    gap: 10px;
+    padding: 15px 25px;
+    /* background: linear-gradient(92.06deg, #827DDD 1.08%, #AFAAFB 105.22%); */
+    background: #9590E9;
     color: var(--white);
     font-size: 16px;
     font-weight: 400;
@@ -31,6 +33,18 @@
 .btn:hover {
     background: #726EC6;
     color: var(--white);
+}
+
+.btn svg {
+    transform: translateY(-2px);
+}
+
+.btn path {
+    transition: .2s ease-in-out all;
+}
+
+.btn:hover path {
+    fill: var(--white);
 }
 
 .autorization {
@@ -129,8 +143,15 @@ main {
     gap: 120px;
 }
 
+main .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 header {
     padding-top: 10px;
+    transition: .2s ease-in-out all;
 }
 
 header .container {
@@ -142,6 +163,22 @@ header .container {
     border-radius: 10px;
     gap: 110px;
     width: calc(100% - 60px);
+}
+
+header.fixed {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header.fixed .container {
+    background: #3e3b5b;
+    box-shadow: 0px 10px 25px 20px rgba(26, 26, 26, 0.23);
+}
+
+header.fixed .sub-menu .menu-item {
+    background: #3e3b5b;
 }
 
 .header__nav {
@@ -184,7 +221,6 @@ header .sub-menu {
     left: -10px;
     padding-top: 30px;
     list-style: none;
-    background: var(--lilac-dark);
     border-radius: 0px 0px 5px 5px;
 }
 
@@ -194,6 +230,10 @@ header .sub-menu::before {
     width: 100%;
     height: 3px;
     background: var(--white);
+}
+
+header .sub-menu .menu-item {
+    background: var(--lilac-dark);
 }
 
 header .sub-menu .menu-item a {
@@ -211,8 +251,219 @@ header .sub-menu .menu-item a:hover {
     border: none;
 }
 
-footer .container {
+.start .container {
+    padding: 50px 25px;
+    background: var(--lilac-dark);
+
+    border-radius: 10px;
+}
+
+.start__top {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.start__list {
+    display: flex;
+    list-style: none;
+}
+
+.start__item:not(:last-child) {
+    padding-right: 50px;
+}
+
+.start h3 {
+    padding-top: 55px;
+    position: relative;
+    margin-bottom: 10px;
+    color: var(--lilac);
+}
+
+.start h3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50px;
+    background: linear-gradient(92.06deg, #827DDD 1.08%, #AFAAFB 105.22%);
+}
+
+.start__item:not(:last-child) h3::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    display: block;
+    width: calc(100% + 55px);
+    height: 1px;
+    background: linear-gradient(92.06deg, #827DDD 1.08%, #AFAAFB 105.22%);
+}
+
+.analyst__top {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.analyst__top p {
+    max-width: 415px;
+}
+
+.analyst__buttons {
+    display: flex;
     gap: 0;
+    width: 100%;
+    border: 1px solid var(--lilac);
+    border-radius: 10px;
+    background: #CABCF84D;
+}
+
+.analyst__buttons button {
+    width: 100%;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(18px, 3vw, 24px);
+    line-height: 100%;
+    color: var(--lilac);
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    transition: .2s ease-in-out all;
+}
+
+.analyst__buttons button.active {
+    background: var(--lilac);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.analyst__widgets {
+    margin-top: -10px;
+}
+
+.analyst__widget {
+    display: none;
+}
+
+.analyst__widget.active {
+    display: block;
+}
+
+.values__img {
+    margin-bottom: 20px;
+}
+
+.values__author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.values__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.values__post {
+    font-family: 'Numans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 115%;
+    color: var(--grey);
+}
+
+.banner .container {
+    position: relative;
+    background: #A19DF5;
+    border-radius: 10px;
+}
+
+.banner__content {
+    z-index: 1;
+    position: relative;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.banner .container::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/banner-left.svg) left center / contain no-repeat;
+}
+
+.banner .container::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/banner-right.svg) right center / contain no-repeat;
+}
+
+.banner h2 {
+    max-width: 690px;
+}
+
+.banner .btn {
+    margin-top: 10px;
+    padding: 15px 100px;
+}
+
+.swiper-bg {
+    background: url('../img/swiper-bg.png') center / contain no-repeat;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer .container {
+    padding-bottom: 70px;
 }
 
 .footer__logo img {
@@ -265,6 +516,7 @@ footer .menu {
 }
 
 .footer__info * {
+    font-size: 16px;
     color: #747474;
     text-decoration: none;
 }
@@ -329,9 +581,7 @@ footer .menu_item a:hover {
 .values__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
 }
-
 
 
 .values__top p {
@@ -351,6 +601,10 @@ footer .menu_item a:hover {
 .values__buttons {
     display: flex;
     gap: 20px;
+}
+
+.swiper {
+    width: 100%;
 }
 
 .swiper-button-prev:after,
@@ -394,7 +648,6 @@ footer .menu_item a:hover {
 }
 
 .values__item {
-    min-height: 390px;
     padding: 50px 25px;
     background: var(--lilac-dark);
     border-radius: 10px;
@@ -429,7 +682,6 @@ footer .menu_item a:hover {
 .platform__box {
     display: flex;
     gap: 50px;
-    margin-bottom: 30px;
 }
 
 .platform__list {
@@ -459,6 +711,7 @@ footer .menu_item a:hover {
     gap: 20px;
     white-space: nowrap;
     overflow-x: auto;
+    margin-top: -20px;
 }
 
 .platform__buttons .btn {
