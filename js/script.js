@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let body = document.querySelector('body');
     let header = document.querySelector('header');
 
-    window.onscroll = function () {
-        if (pageYOffset > 50) {
-            header.classList.add('fixed');
-            body.style = 'margin-top: 100px'
-        } else {
-            header.classList.remove('fixed');
-            body.style = 'margin: 0'
+    if (body.classList.contains('fixed-header') === false) {
+        window.onscroll = function () {
+            if (pageYOffset > 50) {
+                header.classList.add('fixed');
+                body.style = 'margin-top: 100px'
+            } else {
+                header.classList.remove('fixed');
+                body.style = 'margin: 0'
+            }
+        }
+    } else {
+        window.onscroll = function () {
+            if (pageYOffset > 50) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
         }
     }
 
@@ -25,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    // слайдер
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         loop: true,
@@ -52,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // табы
     let buttons = document.querySelectorAll('.analyst__buttons button')
     let tables = document.querySelectorAll('.analyst__widget')
+    let btns = document.querySelectorAll('.terminal__buttons button')
+    let boxes = document.querySelectorAll('.terminal__box')
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', () => {
@@ -66,5 +79,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 tables[i].classList.add('active')
             }
         })
+    }
+
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', () => {
+            for (let n = 0; n < btns.length; n++) {
+                btns[n].classList.remove('active')
+            }
+
+            btns[i].classList.add('active')
+
+            for (let el = 0; el < boxes.length; el++) {
+                boxes[el].classList.remove('active')
+                boxes[i].classList.add('active')
+            }
+        })
+    }
+
+    
+    // закрытие всех details при открытии нового details
+    const details = document.querySelectorAll("details");
+
+    details.forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+            if (detail.open) setTargetDetail(detail);
+        });
+    });
+
+    function setTargetDetail(targetDetail) {
+        details.forEach((detail) => {
+            if (detail !== targetDetail) {
+                detail.open = false;
+            }
+        });
     }
 })
