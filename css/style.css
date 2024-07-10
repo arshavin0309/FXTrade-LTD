@@ -704,11 +704,11 @@ textarea {
     background: #726EC6;
 }
 
-.platform {
+.platform-hero {
     background: url(../img/platform-bg.png) center / cover no-repeat;
 }
 
-.platform .container {
+.platform-hero .container {
     padding-top: 150px;
     padding-bottom: 90px;
     gap: 0;
@@ -1148,10 +1148,25 @@ details p {
     padding: 0 20px 35px;
 }
 
+.overview {
+    background: url(../img/overview-bg.png) center / cover no-repeat;
+}
 
+.overview .container {
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 0;
+}
 
+.widgets .container {
+    display: grid;
+    grid-template-columns: 390px 420px;
+    gap: 240px;
+}
 
-
+.mch-widget-wej.mch-widget-notifier .widget-wrapper .notifier-widget-body {
+    height: 445px;
+}
 
 
 

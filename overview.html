@@ -48,125 +48,56 @@
     </header>
 
     <main>
-        <section class="platform-hero">
+        <section class="overview">
             <div class="container">
-                <h1>Platform</h1>
-                <p>Access to powerful tools for technical and fundamental market analysis.</p>
-            </div>
-        </section>
-
-        <section class="terminal">
-            <div class="container">
-                <div class="terminal__content">
-                    <h3>Get acquainted with our platform</h3>
-                    <p>We have created an advanced, user-friendly platform for you to enhance your trading experience.</p>
-                    <ul class="terminal__list">
-                        <li class="terminal__item">Intuitive and easy to use interface</li>
-                        <li class="terminal__item">Regular updates and instant price alerts for 6100 markets</li>
-                        <li class="terminal__item">Technical indicators, analytical tools and advanced charts</li>
-                        <li class="terminal__item">An effective hedging method and risk management tools</li>
-                    </ul>
-                </div>
-                <div class="terminal__tabs">
-                    <div class="terminal__buttons">
-                        <button class="active">Web-terminal</button>
-                        <button>Desktop Trader</button>
-                        <button>Mobile version</button>
-                    </div>
-                    <div class="terminal__box terminal__box--1 active">
-                        <div class="terminal__info">
-                            <div>
-                                <p>The web version of the terminal allows you to perform any type of trading operations online: it updates quotes in real time, gives you access to the history of trading operations and indicators for technical analysis.</p>
-                                <p>Always up to date - forget about downloads and installations. Quick start of real trading and instant transition to account replenishment. Ideal solution for beginners.</p>
-                            </div>
-                            <div>
-                                <a href="" class="btn autorization">Go to Web-terminal</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="terminal__box terminal__box--2">
-                        <div class="terminal__info">
-                            <div>
-                                <p>Multifunctional, productive and reliable application.</p>
-                                <p>A classic platform for trading in accordance with trends on modern technologies. Start working without delay, all you need to work is any personal computer or laptop onon Windows or Mac OS</p>
-                            </div>
-                            <div>
-                                <a href="" class="btn autorization">Download for Windows</a>
-                                <a href="" class="btn autorization">Download for Mac</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="terminal__box terminal__box--3">
-                        <div class="terminal__info">
-                            <div>
-                                <p>The mobile version of the terminal is designed specifically for active trading and maximum freedom. Trade with pleasure from anywhere with a mobile terminal.</p>
-                                <p>The full list of features is the same as in the "large" version of the program. Install yourself a mobile application from the official store.</p>
-                            </div>
-                            <div>
-                                <a href="" class="btn">Download in App Store</a>
-                                <a href="" class="btn">Download in Google Play</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="start">
-            <div class="container">
-                <div class="start__top">
-                    <h2>How to start trading</h2>
-                    <a href="" class="btn">Start trading</a>
-                </div>
-                <ul class="start__list">
-                    <li class="start__item">
-                        <h3>Open an account</h3>
-                        <p>Register in your personal account and open a trading account</p>
-                    </li>
-                    <li class="start__item">
-                        <h3>Top up your account</h3>
-                        <p>Choose the method of replenishment that suits you from several options</p>
-                    </li>
-                    <li class="start__item">
-                        <h3>Start trading</h3>
-                        <p>Go to Web Terminal from our site, log in and start earning</p>
-                    </li>
-                </ul>
+                <h1>Market overview</h1>
+                <p>The FXTrade LTD analyst team conducts accurate technical analysis to understand market trends so that traders can use this information as a guide for making decisions.</p>
             </div>
         </section>
 
         <section class="values">
             <div class="container">
                 <div class="values__top">
-                    <h2>Benefits of trading </h2>
-                    <p>When you start working with us, you will have access to advanced capital development strategies. We provide:</p>
+                    <h2>Quotes Online</h2>
+                    <p>Financial market quotes with additional information and charts</p>
                 </div>
-                <div class="grid__list">
-                    <div class="grid__item">
-                        <img class="values__img" src="img/speed.svg" alt="">
-                        <div class="values__title">Speed</div>
-                        <p>FXTrade LTD is pleased to provide quality order fulfillment.</p>
-                    </div>
-                    <div class="grid__item">
-                        <img class="values__img" src="img/Convenience.svg" alt="">
-                        <div class="values__title">Convenience</div>
-                        <p>Take advantage of every market with FXTrade LTD's multi-asset trading platform.</p>
-                    </div>
-                    <div class="grid__item">
-                        <img class="values__img" src="img/Flexibility.svg" alt="">
-                        <div class="values__title">Flexibility</div>
-                        <p>Depending on the type of account and the chosen strategy, FXTrade LTD allows traders to choose the optimal leverage from 1:1 to 1:500.</p>
-                    </div>
+                
+                <script src="https://api.marketcheese.com/widgets/quotes/widget.js" data-config='{"language":"en","lastColumn":"todayIncrement","adaptive":true,"columns":"ask,bid,dayOpening,dayMax,dayMin,todayIncrement,todayIncrementAbs","groups":[{"name":"Металлы","symbols":"97,98,99,100,104"},{"name":"Энергоносители","symbols":"127,128,129,277"}]}'></script>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="container">
+                <div class="values__top">
+                    <h2>Online charts</h2>
+                    <p>Use the main tool of traders - technical analysis on the chart of a financial instrument</p>
+                </div>
+
+                <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"en","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD"}'></script>
+            </div>
+        </section>
+
+        <section class="widgets">
+            <div class="container">
+                <div class="widgets__item">
+                    <h2>Market leaders</h2>
+                    <p>Make fast trading decisions with market leader metrics</p>
+                    <script src="https://api.marketcheese.com/widgets/leaders/widget.js" data-config='{"filters":{"segments":"14,4,16,8,5,7,15"},"language":"en"}'></script>
+                </div>
+                <div class="widgets__item">
+                    <h2>Significant events</h2>
+                    <p>The main economic events of the world and the reaction of the market in real time</p>
+                    <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"en","period":"all","multipleIndicators":true,"adaptive":false,"currencies":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18"}'></script>
                 </div>
             </div>
         </section>
 
-        <section class="banner">
+        <section class="banner banner-2">
             <div class="container">
                 <div class="banner__content">
-                    <h2>All you need to trade forex, from a leader in trading</h2>
-                    <p>Forex trading is available 23 hours per day Sunday through Friday</p>
-                    <a href="" class="btn autorization">Register</a>
+                    <h2>Get started risk-free with FXTrade </h2>
+                    <p>Test drive FXTrade platform and practice your trading strategies without putting any real money on the line</p>
+                    <a href="" class="btn autorization">Open an account</a>
                 </div>
             </div>
         </section>
