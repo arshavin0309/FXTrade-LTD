@@ -1505,6 +1505,38 @@ li span {
     gap: 0;
 }
 
+.cookies {
+    position: fixed;
+    z-index: 10;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    margin-left: auto;
+    max-width: 450px;
+    display: none;
+    gap: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    background: #333333;
+    padding: 25px;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.cookies p {
+    font-size: 16px;
+}
+
+.cookies a {
+    color: var(--white);
+}
+
+.cookies .btn {
+    margin-top: 5px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
 
 
 
@@ -1594,5 +1626,25 @@ li span {
 
     .header__nav.show .sub-menu {
         border-radius: initial;
+    }
+    
+    .cookies {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cookies .btn {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
