@@ -868,9 +868,9 @@ body.platform-page::after {
 
 .platform__item,
 .tariffs__item,
-.terminal__item {
+.terminal__item,
+.grid__item li {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
@@ -878,15 +878,23 @@ ul {
     list-style: none;
 }
 
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 .platform__item::before,
 .tariffs__item::before,
-.terminal__item::before {
+.terminal__item::before,
+.grid__item li::before {
+    position: relative;
+    top: 7px;
     content: '';
     width: 8px;
     height: 8px;
     display: block;
     background: var(--lilac);
     transition: .2s ease-in-out all;
+    flex: 0 0 auto;
 }
 
 .platform__buttons {
@@ -1269,6 +1277,82 @@ details p {
 
 .news__pagination li.active {
     background: var(--lilac);
+}
+
+.training-hero {
+    background: url(../img/training-bg.png) center / cover no-repeat;
+}
+
+.training-hero .container {
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 0;
+}
+
+.grid__item h3 {
+    margin-bottom: 10px;
+    color: var(--lilac);
+}
+
+.training__top {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.training__top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.training__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.training__content p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.advantages .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.advantages h2 {
+    margin-bottom: 50px;
+}
+
+.advantages p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.advantages__content {
+    grid-column: 1/3;
+}
+
+.advantages__img {
+    width: 100%;
+    height: 100%;
+    grid-row: 1/3;
+    grid-column: 3/4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.analysis-hero {
+    background: url(../img/analysis-bg.png) center / cover no-repeat;
+}
+
+.analysis-hero .container {
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 0;
 }
 
 
