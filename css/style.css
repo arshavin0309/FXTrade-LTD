@@ -237,7 +237,7 @@ header .sub-menu::before {
 }
 
 header .sub-menu .menu-item {
-    background: var(--lilac-dark);
+    background: #3e3b5b;
 }
 
 header .sub-menu .menu-item a {
@@ -994,7 +994,8 @@ footer .menu_item a:hover {
 }
 
 li.menu-item,
-li.grid__item {
+li.grid__item,
+li.footer__item {
     margin-bottom: 0;
 }
 
@@ -1126,6 +1127,7 @@ h1 {
 }
 
 details {
+    position: relative;
     width: 100%;
     background: #47446BCC;
     border-radius: 6px;
@@ -1162,8 +1164,28 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-details p {
+details > p,
+details > div {
     padding: 0 20px 35px;
+}
+
+details > div > p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+details::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 100%;
+    background: var(--white);
+    border-radius: 6px 0 0 6px;
+    transition: .2s ease-in-out all;
+}
+
+details[open]::before {
+    background: var(--lilac);
 }
 
 .overview {
@@ -1405,12 +1427,22 @@ li span {
 }
 
 .discription__box h3 {
-    margin-top: 25px;
-    margin-bottom: 15px;
     color: var(--lilac);
 }
 
+.details h2 {
+    margin-bottom: 30px;
+}
 
+.fundamental-analysis {
+    background: url(../img/fundamental-analysis-bg.png) center / cover no-repeat;
+}
+
+.fundamental-analysis .container {
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 0;
+}
 
 
 
@@ -1448,9 +1480,13 @@ li span {
         flex-direction: column;
         position: absolute;
         top: 90px;
-        left: 0;
+        left: 30px;
+        width: calc((100% - 60px));
         height: calc(100vh - 90px);
+        align-items: center;
         justify-content: center;
+        background: #3e3b5b;
+        border-radius: 10px;
     }
 
     .header__nav.show .menu {
