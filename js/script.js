@@ -28,10 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     let menuItems = document.querySelectorAll('header .menu > .menu-item')
+    let subMenu = document.querySelectorAll('.sub-menu')
 
     for (let i = 0; i < menuItems.length; i++) {
-        menuItems[i].addEventListener('click', () => {
-            document.querySelector('.sub-menu').classList.toggle('show')
+        menuItems[i].addEventListener('click', (e) => {
+            +
+            e.preventDefault()
+
+            if (subMenu[i].classList.contains('show') === false) {
+                for (let e = 0; e < subMenu.length; e++) {
+                    subMenu[e].classList.remove('show')
+                }
+
+                subMenu[i].classList.toggle('show')
+            } else {
+                subMenu[i].classList.remove('show')
+            }
         })
     }
 
