@@ -1859,6 +1859,9 @@ li span {
 }
 
 @media (max-width: 768px) {
+    .tariffs__box {
+        padding: 30px 10px;
+    }
     .header__logo {
         max-width: 140px;
     }
@@ -1956,7 +1959,7 @@ li span {
         text-align: center;
     }
 
-    h1 {
+    .hero h1 {
         text-align: center;
     }
 
@@ -1969,6 +1972,10 @@ li span {
     }
 
     .values__item {
+        padding: 30px 10px;
+    }
+
+    .tariffs__box {
         padding: 30px 10px;
     }
 
