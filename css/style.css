@@ -1697,7 +1697,7 @@ li span {
         padding: 20px 10px;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: space-between;
         gap: 20px;
     }
 
