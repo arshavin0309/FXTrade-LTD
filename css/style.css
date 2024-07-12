@@ -1582,7 +1582,9 @@ li span {
     object-fit: contain;
 }
 
-
+.swiper-pagination {
+    display: none;
+}
 
 
 
@@ -1878,6 +1880,11 @@ li span {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
+    .platform__img {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1898,6 +1905,81 @@ li span {
 }
 
 @media (max-width: 500px) {
+    .header__nav.show {
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+
+    .hero__right {
+        gap: 30px;
+    }
+
+    .hero img {
+        margin: auto;
+    }
+
+    .hero__main {
+        display: grid;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    main {
+        gap: 80px;
+    }
+
+    .start__box {
+        padding: 30px 10px;
+    }
+
+    .values__item {
+        padding: 30px 10px;
+    }
+
+    .analyst__widgets {
+        margin-top: 15px;
+    }
+
+    .swiper-pagination {
+        position: initial;
+        display: block;
+        margin-top: 50px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: var(--white);
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--lilac);
+    }
+
+    .values__buttons {
+        display: none;
+    }
+
+    .values__top {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    main .container {
+        gap: 30px;
+    }
+
+    .platform__content {
+        gap: 30px;
+    }
+
     .overflow {
         margin-right: -15px;
         padding-right: 15px;
