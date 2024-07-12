@@ -676,7 +676,7 @@ textarea {
 .tariffs__grid {
     display: grid;
     gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .tariffs__box {
@@ -1595,7 +1595,6 @@ li span {
 
 
 
-
 @media (min-width: 1050px) {
 
     header .menu-item:hover .sub-menu,
@@ -1606,6 +1605,16 @@ li span {
 }
 
 @media (max-width: 1050px) {
+    .trading__content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .trading-page .values__top {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     .banner__content::before {
         background: url(../img/banner-left-tablet.svg) left center / contain no-repeat;
     }
@@ -1633,7 +1642,7 @@ li span {
         top: 110px;
         left: 30px;
         width: calc((100% - 60px));
-        height: calc(100vh - 140px);
+        height: calc(100vh - 130px);
         background: var(--lilac-dark-without-opacity);
         border-radius: 10px;
 
@@ -1908,8 +1917,8 @@ li span {
 
 @media (max-width: 500px) {
     .header__nav.show {
-        top: 70px;
-        height: calc(100vh - 70px);
+        top: 60px;
+        height: calc(100vh - 60px);
     }
 
     .hero__right {
@@ -2080,5 +2089,12 @@ li span {
         width: 100%;
         left: 0;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .analyst__widgets {
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
