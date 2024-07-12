@@ -32,17 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener('click', (e) => {
-            +
-            e.preventDefault()
+            // e.preventDefault()
 
             if (subMenu[i].classList.contains('show') === false) {
                 for (let e = 0; e < subMenu.length; e++) {
                     subMenu[e].classList.remove('show')
                 }
+                
+                for (let n = 0; n < menuItems.length; n++) {
+                    menuItems[n].classList.remove('active')
+                }
 
                 subMenu[i].classList.toggle('show')
+                menuItems[i].classList.add('active')
             } else {
                 subMenu[i].classList.remove('show')
+                menuItems[i].classList.remove('active')
             }
         })
     }
@@ -51,9 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         loop: true,
-
-        slidesPerView: 3,
-        spaceBetween: 30,
 
         // If we need pagination
         pagination: {
@@ -70,6 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollbar: {
             el: '.swiper-scrollbar',
         },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1
+            },
+            // when window width is >= 480px
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            // when window width is >= 640px
+            1050: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
+          }
     });
 
     // табы
