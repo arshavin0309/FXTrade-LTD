@@ -1604,6 +1604,18 @@ li span {
 }
 
 @media (max-width: 1050px) {
+    .banner__content::before {
+        background: url(../img/banner-left-tablet.svg) left center / contain no-repeat;
+    }
+
+    .banner__content::after {
+        background: url(../img/banner-right-tablet.svg) right center / contain no-repeat;
+    }
+
+    .banner p {
+        max-width: 380px;
+    }
+
     .for-desktop {
         display: none;
     }
@@ -1851,6 +1863,14 @@ li span {
         gap: 10px;
         align-items: start;
     }
+
+    .analyst__buttons {
+        min-width: 420px;
+    }
+
+    .analyst__buttons button {
+        min-width: 210px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1860,7 +1880,30 @@ li span {
     }
 }
 
+@media (max-width: 600px) {
+    .banner__content {
+        padding: 60px 10px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .banner .btn {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 500px) {
+    .overflow {
+        margin-right: -15px;
+        padding-right: 15px;
+        overflow: auto;
+    }
+
     header {
         padding-top: 0;
     }
