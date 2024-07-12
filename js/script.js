@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
               slidesPerView: 1
             },
             // when window width is >= 480px
-            700: {
+            500: {
               slidesPerView: 2,
               spaceBetween: 30
             },
