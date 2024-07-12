@@ -132,7 +132,7 @@ div,
 p {
     font-weight: 400;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     line-height: 130%;
     color: var(--white);
 }
@@ -1623,6 +1623,16 @@ li span {
         background: url(../img/banner-right-tablet.svg) right center / contain no-repeat;
     }
 
+    .banner-2 .banner__content::before {
+        background-size: 17%;
+        background-position: left top;
+    }
+
+    .banner-2 .banner__content::after {
+        background-size: 17%;
+        background-position: right bottom;
+    }
+
     .banner p {
         max-width: 380px;
     }
@@ -1849,6 +1859,10 @@ li span {
 }
 
 @media (max-width: 768px) {
+    .header__logo {
+        max-width: 140px;
+    }
+
     .analyst__buttons {
         white-space: nowrap;
     }
@@ -1919,6 +1933,10 @@ li span {
     .header__nav.show {
         top: 60px;
         height: calc(100vh - 60px);
+    }
+
+    .terms .container {
+        padding: 115px 15px 50px;
     }
 
     .hero__right {
