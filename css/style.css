@@ -1484,6 +1484,26 @@ li span {
     display: none;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lilac) var(--black);
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lilac);
+    border-radius: 5px;
+    border: 3px solid var(--black);
+}
 
 
 
@@ -1656,7 +1676,7 @@ li span {
 
     .about-hero__box {
         display: flex;
-        flex-direction: column;    
+        flex-direction: column;
         gap: 30px;
     }
 
@@ -1682,7 +1702,7 @@ li span {
 
     .service .container {
         display: flex;
-        flex-direction: column;    
+        flex-direction: column;
         gap: 30px;
     }
 
@@ -2386,7 +2406,7 @@ li span {
 
     .swiper {
         width: 100%;
-    }    
+    }
 
     .swiper-pagination {
         width: 100% !important;
