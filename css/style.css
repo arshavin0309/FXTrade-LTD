@@ -1630,6 +1630,14 @@ li span {
 }
 
 @media (max-width: 1050px) {
+    .technical-analysis img {
+        max-height: 400px;
+    }
+
+    .widgets__item {
+        text-align: center;
+    }
+
     .header__logo {
         max-width: 140px;
     }
@@ -1925,8 +1933,15 @@ li span {
     }
 
     .values__top {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .main .values__top {
+        display: grid;
         grid-template-columns: 2fr 1fr;
-        align-items: center;
     }
 
     .values__buttons {
@@ -2127,6 +2142,10 @@ li span {
         width: 115%;
     }
 
+    .swiper-pagination {
+        width: 85% !important;
+    }
+
     .values {
         overflow: hidden;
     }
@@ -2181,6 +2200,11 @@ li span {
 }
 
 @media (max-width: 500px) {
+    .main .values__top {
+        display: flex;
+        flex-direction: column;
+    }
+
     form {
         margin-top: 30px;
         align-items: center;
@@ -2362,6 +2386,10 @@ li span {
 
     .swiper {
         width: 100%;
+    }    
+
+    .swiper-pagination {
+        width: 100% !important;
     }
 
     .values {
