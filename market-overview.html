@@ -83,8 +83,10 @@
                     <h2>Quotes Online</h2>
                     <p>Financial market quotes with additional information and charts</p>
                 </div>
-                
-                <script src="https://api.marketcheese.com/widgets/quotes/widget.js" data-config='{"language":"en","lastColumn":"todayIncrement","adaptive":true,"columns":"ask,bid,dayOpening,dayMax,dayMin,todayIncrement,todayIncrementAbs","groups":[{"name":"Metals","symbols":"97,98,99,100,104"},{"name":"Energy resources","symbols":"127,128,129,277"}]}'></script>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/quotes/widget.js" data-config='{"language":"en","lastColumn":"todayIncrement","adaptive":true,"columns":"ask,bid,dayOpening,dayMax,dayMin,todayIncrement,todayIncrementAbs","groups":[{"name":"Metals","symbols":"97,98,99,100,104"},{"name":"Energy resources","symbols":"127,128,129,277"}]}'></script>
+                </div>
             </div>
         </section>
 
@@ -95,7 +97,9 @@
                     <p>Use the main tool of traders - technical analysis on the chart of a financial instrument</p>
                 </div>
 
-                <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"en","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD"}'></script>
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"en","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD"}'></script>
+                </div>
             </div>
         </section>
 
@@ -104,12 +108,16 @@
                 <div class="widgets__item">
                     <h2>Market leaders</h2>
                     <p>Make fast trading decisions with market leader metrics</p>
-                    <script src="https://api.marketcheese.com/widgets/leaders/widget.js" data-config='{"filters":{"segments":"14,4,16,8,5,7,15"},"language":"en"}'></script>
+                    <div class="widget-box">
+                        <script src="https://api.marketcheese.com/widgets/leaders/widget.js" data-config='{"filters":{"segments":"14,4,16,8,5,7,15"},"language":"en"}'></script>
+                    </div>
                 </div>
                 <div class="widgets__item">
                     <h2>Significant events</h2>
                     <p>The main economic events of the world <br>and the reaction of the market in real time</p>
-                    <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"en","period":"all","multipleIndicators":true,"adaptive":false,"currencies":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18"}'></script>
+                    <div class="widget-box">
+                        <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"en","period":"all","multipleIndicators":true,"adaptive":false,"currencies":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18"}'></script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -196,7 +204,7 @@
                 <p class="footer__copyright">© 2024 FXTrade LTD</p>
             </div>
         </div>
-        
+
         <div class="cookies">
             <p class="text2">We use cookies to learn more about how you use our site and what we can improve. <a href="">Read more</a></p>
             <button class="btn cookies--close">Accept</button>

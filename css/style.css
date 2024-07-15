@@ -1289,6 +1289,7 @@ details[open]::before {
     border-radius: 3px;
     cursor: pointer;
     transition: .2s ease-in-out all;
+    margin-bottom: 0;
 }
 
 .news__pagination li.active {
@@ -1359,12 +1360,15 @@ details[open]::before {
 }
 
 .advantages__img {
-    width: 100%;
-    height: 100%;
     grid-row: 1/3;
     grid-column: 3/4;
-    object-fit: cover;
+}
+
+.advantages__img img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .analysis-hero {
@@ -1414,6 +1418,7 @@ details[open]::before {
 .graphic-shapes__box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 li span {
@@ -1489,6 +1494,7 @@ li span {
 
 
 @media (min-width: 1050px) {
+
     header .menu-item:hover .sub-menu,
     header .sub-menu:hover {
         z-index: 1;
@@ -1624,9 +1630,111 @@ li span {
 }
 
 @media (max-width: 1050px) {
+    .header__logo {
+        max-width: 140px;
+    }
+
+    .information .container {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .about-hero .container {
+        padding-top: 50px;
+    }
+
+    .about-hero__content {
+        width: 100%;
+    }
+
+    .about-hero__box {
+        display: flex;
+        flex-direction: column;    
+        gap: 30px;
+    }
+
+    .about-hero__box img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .service img {
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    .about-hero__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .service__content h2 {
+        margin-bottom: 30px;
+    }
+
+    .service .container {
+        display: flex;
+        flex-direction: column;    
+        gap: 30px;
+    }
+
+    .graphic-shapes__box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .grid__list {
+        gap: 15px;
+    }
+
+    .technical-analysis .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technical-analysis h2 {
+        margin-bottom: 30px;
+    }
+
+    .technical-analysis p:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .advantages .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+
+    .advantages__content {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .advantages__img {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .news__item img {
+        width: calc(100% + 20px);
+        margin: -20px -10px 20px;
+    }
+
+    .news__item {
+        min-height: auto;
+        gap: 25px;
+        padding: 20px 10px;
+    }
+
     .widgets .container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 80px;
+    }
+
+    .mch-widget {
+        margin: auto;
     }
 
     .footer__box {
@@ -1638,7 +1746,8 @@ li span {
         gap: 10px;
     }
 
-    details>p, details>div {
+    details>p,
+    details>div {
         padding: 0 10px 20px 20px;
     }
 
@@ -1724,16 +1833,16 @@ li span {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 110px;
+        top: 90px;
         left: 30px;
         width: calc((100% - 60px));
-        height: calc(100vh - 130px);
+        height: calc(100vh - 95px);
         background: var(--lilac-dark-without-opacity);
         border-radius: 10px;
-
         padding: 20px;
         justify-content: start;
         align-items: start;
+        overflow-y: auto;
     }
 
     .header__nav.show .menu {
@@ -1769,7 +1878,7 @@ li span {
     }
 
     header .menu-item a {
-        padding: 20px 10px;
+        padding: 20px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1786,7 +1895,7 @@ li span {
         transition: .2s ease-in-out all;
     }
 
-    header .menu-item.active > a {
+    header .menu-item.active>a {
         color: var(--lilac);
     }
 
@@ -1938,6 +2047,57 @@ li span {
 }
 
 @media (max-width: 768px) {
+    .information__map {
+        height: 240px;
+    }
+
+    .ymaps3x0--main-engine-container canvas {
+        height: 100%;
+    }
+
+    .information .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .training__top {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+
+    .training--reverse .training__top {
+        flex-direction: column-reverse;
+    }
+
+    .advantages__content {
+        margin-bottom: 15px;
+    }
+
+    .advantages__img img {
+        max-height: 400px;
+    }
+
+    .advantages .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .advantages h2 {
+        margin-bottom: 15px;
+    }
+
+    .advantages .grid__item:not(:first-child) {
+        margin-top: -15px;
+    }
+
+    .discription__box {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
     .terminal__box--1 {
         background-image: none;
     }
@@ -1952,10 +2112,6 @@ li span {
 
     .terminal__info {
         max-width: 100%;
-    }
-
-    .header__logo {
-        max-width: 140px;
     }
 
     .analyst__buttons {
@@ -2025,6 +2181,29 @@ li span {
 }
 
 @media (max-width: 500px) {
+    form {
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    label[for='checkbox'] a {
+        margin-bottom: 0;
+    }
+
+    form .btn {
+        display: block;
+        width: 100%;
+    }
+
+    .news__pagination li {
+        width: 30px;
+        height: 30px;
+    }
+
+    .widgets__item {
+        text-align: left;
+    }
+
     .terminal__info {
         height: 460px;
     }
@@ -2053,6 +2232,12 @@ li span {
     .fundamental-analysis .container,
     .contacts .container {
         padding: 115px 15px 50px;
+    }
+
+    .error .container {
+        padding: 50px 15px 50px;
+        text-align: center;
+        background: #232232;
     }
 
     .hero__right {
@@ -2225,7 +2410,7 @@ li span {
 }
 
 @media (max-width: 360px) {
-    .analyst__widgets {
+    .widget-box {
         margin-left: -15px;
         margin-right: -15px;
     }

@@ -23,12 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    document.querySelector('.burger').addEventListener('click', () => {
-        document.querySelector('.header__nav').classList.toggle('show')
-    })
-
     let menuItems = document.querySelectorAll('header .menu > .menu-item')
     let subMenu = document.querySelectorAll('.sub-menu')
+
+    document.querySelector('.burger').addEventListener('click', () => {
+        for (let n = 0; n < menuItems.length; n++) {
+            menuItems[n].classList.remove('active')
+            subMenu[n].classList.remove('show')
+        }
+
+        document.querySelector('.header__nav').classList.toggle('show')
+    })
 
     for (let i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener('click', (e) => {

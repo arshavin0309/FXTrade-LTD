@@ -127,11 +127,15 @@
                         <li>high emotional tension</li>
                     </ul>
                 </div>
-                <img class="advantages__img" src="img/advantages-desktop.png" alt="">
+                <picture class="advantages__img">
+                    <source media="(max-width: 1050px)" srcset="img/advantages-mobile.png">
+                    <source media="(min-width: 1051px)" srcset="img/advantages-desktop.png">
+                    <img src="img/advantages-desktop.png" alt="">
+                </picture>
             </div>
         </section>
 
-        <section class="training">
+        <section class="training training--reverse">
             <div class="container">
                 <div class="training__top">
                     <img src="img/training.png" alt="">
