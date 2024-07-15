@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let e = 0; e < subMenu.length; e++) {
                     subMenu[e].classList.remove('show')
                 }
-                
+
                 for (let n = 0; n < menuItems.length; n++) {
                     menuItems[n].classList.remove('active')
                 }
@@ -76,20 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1,
-              spaceBetween: 30
+                slidesPerView: 1,
+                spaceBetween: 30
             },
             // when window width is >= 480px
             501: {
-              slidesPerView: 2,
-              spaceBetween: 30
+                slidesPerView: 2,
+                spaceBetween: 30
             },
             // when window width is >= 640px
             1050: {
-              slidesPerView: 3,
-              spaceBetween: 30
+                slidesPerView: 3,
+                spaceBetween: 30
             }
-          }
+        }
     });
 
     // табы
