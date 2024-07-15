@@ -1505,7 +1505,9 @@ li span {
     border: 3px solid var(--black);
 }
 
-
+.mobile {
+    display: none;
+}
 
 
 
@@ -2220,6 +2222,10 @@ li span {
 }
 
 @media (max-width: 500px) {
+    .mobile {
+        display: block;
+    }
+
     .main .values__top {
         display: flex;
         flex-direction: column;
